@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8009
+      uri: http://localhost:8180
   datasource:
     url: jdbc:mysql://localhost:3306/bdinasistencias
     username: root
