@@ -1,13 +1,13 @@
-package edu.migsw.marca;
+package edu.migsw.inasistencia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MarcaApplication {
+public class InasistenciaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MarcaApplication.class, args);
+		SpringApplication.run(InasistenciaApplication.class, args);
 	}
 
 }
