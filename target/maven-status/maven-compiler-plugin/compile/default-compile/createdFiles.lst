@@ -1,0 +1,5 @@
+edu/migsw/inasistencia/InasistenciaApplication.class
+edu/migsw/inasistencia/controllers/InasistenciaController.class
+edu/migsw/inasistencia/repositories/InasistenciaRepository.class
+edu/migsw/inasistencia/entities/InasistenciaEntity.class
+edu/migsw/inasistencia/services/InasistenciaService.class
