@@ -59,4 +59,10 @@ public class InasistenciaController {
         Integer Inasistencias = InasistenciaService.countInasistencias(rut);
         return ResponseEntity.ok(Inasistencias);
     }
+
+    @PutMapping("/justificar/{rut}")
+    public ResponseEntity<String> justificarInasistencia(@PathVariable("rut") String rut){
+        String justificacion = InasistenciaService.justificarInasistencia(rut);
+        return ResponseEntity.ok(justificacion);
+    }
 }

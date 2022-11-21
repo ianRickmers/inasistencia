@@ -1,5 +1,6 @@
 package edu.migsw.inasistencia.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,6 +40,23 @@ public class InasistenciaService {
         return InasistenciaRepository.countInasistencias(rut);
     }
 
+    public String justificarInasistencia(String rut){
+        ArrayList<InasistenciaEntity> inasistencia = InasistenciaRepository.findByRut(rut);
+        if(inasistencia!=null){
+            for(InasistenciaEntity inas:inasistencia){
+                if(inas.getJustificada()==0){
+                    inas.setJustificada(1);
+                    InasistenciaRepository.save(inas);
+                }
+                else{
+                    inas.setJustificada(0);
+                    InasistenciaRepository.save(inas);
+                }
+            }
+            return("Inasistencias justificadas");
+        }
+        return("Inasistencias no encontradas");
+    }
 
 
     /* public InasistenciaEntity crearInasistencia( String rut, String fecha){
